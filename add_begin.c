@@ -44,7 +44,18 @@ void add_begin(NODE **hptr, int value)
 		(*hptr)->value = value;
 	}
 }
+void freeMemory(NODE *hptr)
+{
 
+	NODE *tmpNode;
+	while(hptr)
+	{
+	    tmpNode = hptr;
+		hptr = hptr->next;
+		free(tmpNode);
+	}
+
+}
 int main()
 {
 	
@@ -62,4 +73,5 @@ int main()
 
 	print(hptr);
 
+	freeMemory(hptr);
 }

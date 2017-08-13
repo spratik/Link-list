@@ -51,6 +51,19 @@ void add_end(NODE **hptr, int value)
 	}
 }
 
+void freeMemory(NODE *hptr)
+{
+
+	NODE *tmpNode;
+	while(hptr)
+	{
+	    tmpNode = hptr;
+		hptr = hptr->next;
+		free(tmpNode);
+	}
+
+}
+
 int main()
 {
 	
@@ -67,5 +80,5 @@ int main()
 	}while(ch == 'Y' || ch == 'y');		
 
 	print(hptr);
-
+    freeMemory(hptr);
 }
