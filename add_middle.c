@@ -85,10 +85,12 @@ while(tmpNode)
 void freeMemory(NODE *hptr)
 {
 
+	NODE *tmpNode;
 	while(hptr)
 	{
-	    free(hptr);
+	    tmpNode = hptr;
 		hptr = hptr->next;
+		free(tmpNode);
 	}
 
 }
