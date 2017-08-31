@@ -72,6 +72,7 @@ void reverse_link(NODE **hptr)
 	
 	p = *hptr;
 	
+	
 	while(p)
 	{
 		r = q;
