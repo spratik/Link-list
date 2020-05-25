@@ -71,13 +71,13 @@ void delet_node(ST **ptr,int r)
 			{
 				*ptr=temp->next;
 				free(temp);
-				return;
+			//	return; 	//If we return here than it will delete only first match only
 			}
 			else// last and middle node
 			{
 				temp1->next=temp->next;
 				free(temp);
-				return;
+			//	return;         //If we return here than it will delete only first match only
 			}
 		}
 
